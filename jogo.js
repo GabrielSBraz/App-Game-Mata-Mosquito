@@ -20,7 +20,7 @@ if (nivel === 'normal') {
 //função para capturar o tamanho da tela do usuário no momento
 function ajustaTamanhoPalcoJogo() {
 	altura = window.innerHeight
-	largura = window.innerWidth
+	largura = window.innerWidth 
 }
 
 ajustaTamanhoPalcoJogo()
@@ -54,6 +54,8 @@ function posicaoRandomica() {
 
 	var posicaoX = Math.floor(Math.random() * largura) - 90
 	var posicaoY = Math.floor(Math.random() * altura) - 90
+
+	console.log(largura, altura)
 
 	posicaoX = posicaoX < 0 ? 0 : posicaoX
 	posicaoY = posicaoY < 0 ? 0 : posicaoY
