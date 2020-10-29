@@ -1,7 +1,21 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 3
+var tempo = 20
+
+var criaMosquitoTempo = 1500
+
+//recuperação do nível escolhido
+var nivel = window.location.search
+nivel = (nivel.replace('?', ''))
+
+if (nivel === 'normal') {
+	var criaMosquitoTempo = 1300
+} else if (nivel === 'dificil'){
+	var criaMosquitoTempo = 900
+} else if (nivel === 'chucknorris'){
+	var criaMosquitoTempo = 750
+}
 
 //função para capturar o tamanho da tela do usuário no momento
 function ajustaTamanhoPalcoJogo() {
