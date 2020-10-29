@@ -12,7 +12,7 @@ nivel = (nivel.replace('?', ''))
 if (nivel === 'normal') {
 	var criaMosquitoTempo = 1300
 } else if (nivel === 'dificil'){
-	var criaMosquitoTempo = 900
+	var criaMosquitoTempo = 1000
 } else if (nivel === 'chucknorris'){
 	var criaMosquitoTempo = 750
 }
