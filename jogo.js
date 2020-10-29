@@ -1,14 +1,15 @@
 var altura = 0
 var largura = 0
 
+//função para capturar o tamanho da tela do usuário no momento
 function ajustaTamanhoPalcoJogo() {
 	altura = window.innerHeight
 	largura = window.innerWidth
-	console.log(largura, altura)
 }
 
 ajustaTamanhoPalcoJogo()
 
+//função para a criação e remoção dos mosquitos na tela
 function posicaoRandomica() {
 
 	//remover o mosquito anterior (caso exista)
@@ -22,8 +23,6 @@ function posicaoRandomica() {
 	posicaoX = posicaoX < 0 ? 0 : posicaoX
 	posicaoY = posicaoY < 0 ? 0 : posicaoY
 
-	console.log(posicaoX, posicaoY)
-
 	//criar elemento html
 	var mosquito = document.createElement('img')
 	mosquito.src = 'imagens/mosca.png'
@@ -36,6 +35,7 @@ function posicaoRandomica() {
 	document.body.appendChild(mosquito)
 }
 
+//função para aparecer diferentes tamanhos de mosquitos
 function tamanhoAleatorio() {
 	var classe = Math.floor(Math.random() * 3)
 
@@ -49,6 +49,7 @@ function tamanhoAleatorio() {
 	}
 }
 
+//função para os mosquitos aparecerem com o rosto para à direita ou esquerda 
 function ladoAleatorio() {
 	var classe = Math.floor(Math.random() * 2)
 
