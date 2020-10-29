@@ -18,7 +18,7 @@ function posicaoRandomica() {
 		document.getElementById('mosquito').remove()
 		//diminuindo pontos de vida caso o elemento não seja clicado
 		if (vidas > 3) {
-			alert ('G A M E   O V E R')
+			window.location.href = 'fim_de_jogo.html'
 		} else {
 			document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
 			vidas++
