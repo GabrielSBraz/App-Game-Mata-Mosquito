@@ -1,6 +1,7 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 3
 
 //função para capturar o tamanho da tela do usuário no momento
 function ajustaTamanhoPalcoJogo() {
@@ -9,6 +10,18 @@ function ajustaTamanhoPalcoJogo() {
 }
 
 ajustaTamanhoPalcoJogo()
+
+//cronômetro decrescendo a cada 1 segundo ou 1000 milissegundo
+var cronometro = setInterval(function() {
+	tempo -= 1
+	if (tempo < 0){
+		clearInterval(cronometro)
+		clearInterval(criaMosquito)
+		alert('V I T O R I A')
+	} else {
+		document.getElementById('tempo').innerHTML = tempo 
+	}
+}, 1000)
 
 //função para a criação e remoção dos mosquitos na tela
 function posicaoRandomica() {
