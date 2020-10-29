@@ -1,5 +1,6 @@
 body {
-
+ background-image: url(imagens/bg.jpg);
+ background-repeat: no-repeat;
 }
 
 /*Diferentes tamanhos de mosquitos*/
@@ -26,4 +27,27 @@ body {
 
 .ladoB {
 	transform: scaleX(-1);
+}
+
+/*painel e cronometro*/
+
+.painel {
+	position: absolute;
+	width: 190px;
+	padding: 10px;
+	left: 0px;
+	bottom: 0px;
+	border-top: solid 1px #fff;
+	background-color: #fff;
+	opacity: 0.7;
+}
+
+.vidas {
+	float: left;
+}
+
+.cronometro {
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
 }
